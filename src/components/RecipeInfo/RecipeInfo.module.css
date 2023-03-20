@@ -36,3 +36,15 @@
 .instructions {
   width: 50%;
 }
+.button {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 14px;
+  color: black;
+  cursor: pointer;
+  background-color: transparent;
+  position: fixed;
+  top: 30px;
+  left: 60px;
+  z-index: 10;
+}

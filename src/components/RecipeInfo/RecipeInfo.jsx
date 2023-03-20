@@ -1,9 +1,10 @@
 import styles from "./RecipeInfo.module.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export const RecipeInfo = () => {
   const [item, setItem] = useState();
+  const navigate = useNavigate();
 
   const { MealId } = useParams();
   if (MealId !== "") {
@@ -14,6 +15,9 @@ export const RecipeInfo = () => {
 
   return (
     <div className={styles.RecipeInfo}>
+      <button className={styles.button} onClick={() => navigate(-1)}>
+        Go back
+      </button>
       {!item ? (
         ""
       ) : (
