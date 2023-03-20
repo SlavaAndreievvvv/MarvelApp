@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 *,
 *::before,
 *::after {
@@ -7,5 +9,22 @@
   outline: none;
   border: none;
   text-decoration: none;
-  cursor: pointer;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+button,
+label {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }

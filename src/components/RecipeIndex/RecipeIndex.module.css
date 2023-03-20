@@ -1,0 +1,7 @@
+.alphaLetter {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 165%;
+  color: #242424;
+  cursor: pointer;
+}
