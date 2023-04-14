@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { MealCard } from "../MealCard/MealCard";
 import { RecipeIndex } from "../RecipeIndex/RecipeIndex";
 import styles from "./Meal.module.css";
+import { Input } from "../Input";
 
 export const Meal = () => {
   const [url, setUrl] = useState(
@@ -32,21 +33,19 @@ export const Meal = () => {
 
   return (
     <main className={styles.main}>
-      <div className={styles.header}>
-        <h1 className={styles.title}>Search Food</h1>
-      </div>
-      <div className={styles.searchBlock}>
-        <input
-          id="search"
-          className={styles.input}
-          type="search"
-          placeholder="Search Food..."
-          onChange={(e) => setSearch(e.target.value)}
-          onKeyPress={searchRecipe}
-        />
-      </div>
-      <div className={styles.indexContainer}>
-        <RecipeIndex alphaIndex={(alpha) => setIndex(alpha)} />
+      <div className={styles.head}>
+        <div className={styles.searchBlock}>
+          <h1 className={styles.title}>Search by Recipe</h1>
+          <Input
+            placeholder="What recipe are you looking for?"
+            onChange={setSearch}
+            onKeyPress={searchRecipe}
+          />
+        </div>
+
+        <div className={styles.indexContainer}>
+          <RecipeIndex alphaIndex={(alpha) => setIndex(alpha)} />
+        </div>
       </div>
       <div className={styles.content}>
         {show ? <MealCard data={item} /> : "Not Found"}
